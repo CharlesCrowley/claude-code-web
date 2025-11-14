@@ -186,6 +186,111 @@ After intensive initial training (daily practice for 1 week), learners can trans
 - Transitioning to weekly practice after Week 1 is research-backed and may improve long-term outcomes
 - Monthly maintenance practice supports multi-year retention
 
+### 8. Determining the First Review Interval After Intensive Training
+
+Research provides specific guidance on choosing the optimal first review interval after completing an intensive training period (e.g., 7 days of daily practice).
+
+#### The "Longer is Safer Than Shorter" Principle
+
+**Critical finding:**
+> "The costs of using a gap **longer than optimal** are decidedly **less** than the costs of using a shorter gap."
+
+**Implication:** When uncertain about spacing intervals, err on the side of longer spacing. Overshooting the optimal interval is safer than undershooting.
+
+#### SuperMemo Algorithm Intervals
+
+The widely-used SuperMemo SM-2 algorithm specifies:
+- **First interval:** 1 day after initial learning session
+- **Second interval:** 6 days after first review
+- **Subsequent intervals:** Previous interval × easiness factor
+
+For items scoring below 4 (on 0-5 scale), repeat until mastery before advancing to next interval.
+
+#### Percentage-Based First Interval Selection
+
+Research found optimal first study gaps decline as a percentage of the retention goal:
+- **1-week retention goal:** 20-40% gap = 1-2 days
+- **1-month retention goal:** 10-30% gap = 3-9 days
+- **6-month retention goal:** 10-20% gap = 3-5 weeks
+- **1-year retention goal:** 5-10% gap = 2-4 weeks
+
+**Application:** Match your first review interval to your long-term retention goals using 10-30% of the target retention period.
+
+#### Fibonacci-Like Expansion (Harmon & Miller Study)
+
+Research by Harmon and Miller identified an optimal expanding schedule:
+
+**Days:** 1, 2, 3, 5, 8, 13, 21, 34
+
+**Key findings:**
+- This group performed **significantly better** than other spacing schedules
+- Participants initially benefited from concentrated sessions to reach a learning threshold
+- Then benefited from progressive spacing of sessions
+- Demonstrates value of rapid initial consolidation followed by expanding intervals
+
+#### First Review Options After 7-Day Intensive Training
+
+For applications like "Fluency Gym" with 7 consecutive days of intensive practice:
+
+**Option 1: Conservative (4 days post-intensive)**
+- Safe and well-supported
+- Fits 10-30% rule for ~2-week retention goals (4/14 = 28%)
+- Good choice if unsure about learner retention capability
+- Next intervals: 4 → 8 → 16 → 32 days
+
+**Option 2: Research Sweet Spot (7 days post-intensive)**
+- **Recommended based on convergent evidence:**
+  - Japanese study validated 7-day intervals equal to 1-day
+  - SuperMemo's second interval is 6 days (close to 7)
+  - Multiple studies identify 7-day as the "sweet spot"
+- After intensive week, material is well-consolidated
+- Fits 10-30% rule for 1-month retention (7/30 = 23%)
+- Next intervals: 7 → 14 → 28 → 56 days
+
+**Option 3: Aggressive (10 days post-intensive)**
+- Supported by "longer is safer" principle
+- Fits 10-30% rule for 90-day retention (10/90 = 11%)
+- May reduce learner fatigue/annoyance after intensive week
+- Works well after 7 days of intensive consolidation
+- Next intervals: 10 → 20 → 40 → 80 days
+
+**Recommended multiplier:** 2x (doubling) for exponential expansion
+- Simple, predictable, and research-backed
+- Aligns with Fibonacci-like expansion pattern
+- Examples: 7→14→28→56 or 10→20→40→80
+
+#### Practical Schedule Comparison
+
+**For applications following 7-day intensive training:**
+
+```
+Conservative (4-day first interval):
+Days 1-7: Intensive daily practice
+Day 11: First review (4 days later)
+Day 19: Second review (8 days from first)
+Day 35: Third review (16 days from second)
+Day 67: Fourth review (32 days from third)
+
+Recommended (7-day first interval):
+Days 1-7: Intensive daily practice
+Day 14: First review (7 days later)
+Day 28: Second review (14 days from first)
+Day 56: Third review (28 days from second)
+Day 112: Fourth review (56 days from third)
+
+Aggressive (10-day first interval):
+Days 1-7: Intensive daily practice
+Day 17: First review (10 days later)
+Day 37: Second review (20 days from first)
+Day 77: Third review (40 days from second)
+Day 157: Fourth review (80 days from third)
+```
+
+**Selection criteria:**
+- Use **conservative** if targeting short-term retention or learners are beginners
+- Use **recommended (7-day)** for balance of retention, practicality, and research support
+- Use **aggressive (10-day)** if targeting long-term retention and learners completed intensive week successfully
+
 ## Practical Recommendations
 
 Based on the research evidence:
@@ -236,8 +341,12 @@ Based on the research evidence:
 - Recent study (2024). 116 Japanese L2 English learners comparing 1-day vs 7-day spacing intervals for fluency training.
 
 **Spaced Repetition Systems:**
-- Wozniak, Piotr. Classic spaced repetition schedule (SuperMemo system).
+- Wozniak, Piotr. Classic spaced repetition schedule (SuperMemo SM-2 algorithm).
 - Pimsleur, Paul (1967). Graduated-interval recall for audio/oral language instruction.
+
+**Optimal Interval Timing:**
+- Harmon & Miller. Fibonacci-like expanding interval study (Days: 1, 2, 3, 5, 8, 13, 21, 34). Found significantly better performance with gradual expansion after concentrated initial sessions.
+- Large-scale percentage-based study. Found optimal first study gap declines from 20-40% for 1-week retention to 5-10% for 1-year retention. "Longer is safer than shorter" principle.
 
 ### Research Topics
 - Spacing effect in language acquisition
@@ -255,19 +364,29 @@ The research provides clear, evidence-based guidance for pronunciation and fluen
 **Initial Acquisition Phase (Week 1):**
 Daily practice (15+ minutes) is optimal for establishing new pronunciation patterns and fluency skills. This intensive initial phase creates the neural foundation for long-term retention.
 
-**Transition to Maintenance (Weeks 2+):**
-After intensive initial training, learners can and should transition to longer spacing intervals. Research demonstrates that:
+**First Review After Intensive Training:**
+Research supports three evidence-based options for the first review after completing an intensive week:
+- **Conservative (4 days):** Safe for all learners, 2x doubling progression
+- **Recommended (7 days):** Sweet spot with convergent research support, 2x doubling progression
+- **Aggressive (10 days):** Supported by "longer is safer" principle for long-term retention goals
+
+**Key Principle - "Longer is Safer Than Shorter":**
+When uncertain about spacing intervals, err on the side of longer gaps. The costs of overshooting optimal intervals are less than undershooting. Counter-intuitively, **longer spacing intervals after intensive initial training improve long-term retention** rather than degrading it. The spacing effect is one of the most robust findings in cognitive psychology, and language learning research consistently confirms its power.
+
+**Transition to Maintenance:**
+After the first review, continue exponential expansion (2x multiplier):
+- From 7-day first interval: 7 → 14 → 28 → 56 days
+- From 10-day first interval: 10 → 20 → 40 → 80 days
+
+Research demonstrates that:
 - Weekly practice (7-day intervals) maintains fluency gains as effectively as daily practice
 - 30-day intervals after initial training enhance 8-year retention compared to shorter intervals
-- Expanding intervals (daily → every 2-3 days → weekly → bi-weekly → monthly) optimize both immediate performance and long-term retention
-
-**Key Principle:**
-Counter-intuitively, **longer spacing intervals after intensive initial training improve long-term retention** rather than degrading it. The spacing effect is one of the most robust findings in cognitive psychology, and language learning research consistently confirms its power.
+- Fibonacci-like expanding intervals (1, 2, 3, 5, 8, 13, 21, 34) significantly outperform other schedules
 
 **Practical Bottom Line:**
-- Week 1: Practice daily
-- Week 2: Practice every 2-3 days
-- Month 1+: Practice weekly
-- Month 3+: Practice bi-weekly to monthly for maintenance
+- Days 1-7: Practice daily (intensive acquisition)
+- Day 14 or 17: First review (7 or 10 days later)
+- Continue 2x expansion: 14 → 28 → 56 or 20 → 40 → 80 days
+- Target retention period should guide interval selection (use 10-30% rule)
 
 This graduated approach leverages the spacing effect for superior long-term retention while making practice schedules sustainable. Comprehensibility gains appear after approximately 6 exposures, while accent reduction requires more extensive practice over longer periods.
