@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firstly Academy Flashcard Saver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <span class="logo-text">Firstly Academy</span>
+      </div>
+    </div>
+
+    <!-- Authentication Section (shown when not logged in) -->
+    <div id="auth-section" class="section" style="display: none;">
+      <h2>Sign In</h2>
+      <p class="subtitle">Sign in to start saving flashcards</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <button type="submit" id="login-btn" class="btn btn-primary">
+          <span id="login-btn-text">Sign In</span>
+          <span id="login-btn-spinner" class="spinner" style="display: none;"></span>
+        </button>
+      </form>
+
+      <div class="link-section">
+        <a href="https://firstly-academy.com/signup" target="_blank">Create an account</a>
+        <span class="separator">•</span>
+        <a href="https://firstly-academy.com/forgot-password" target="_blank">Forgot password?</a>
+      </div>
+    </div>
+
+    <!-- Main Section (shown when logged in) -->
+    <div id="main-section" class="section" style="display: none;">
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="user-details">
+          <div class="user-icon">👤</div>
+          <div class="user-text">
+            <div class="user-email" id="user-email"></div>
+            <div class="user-status">Signed in</div>
+          </div>
+        </div>
+        <button id="logout-btn" class="btn btn-text">Logout</button>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="stats-card">
+        <div class="stats-header">
+          <h3>Today's Flashcards</h3>
+          <button id="refresh-stats-btn" class="btn-icon" title="Refresh">
+            <span class="refresh-icon">🔄</span>
+          </button>
+        </div>
+        <div class="stats-count" id="stats-count">
+          <span class="count-number">-</span>
+          <span class="count-label">saved</span>
+        </div>
+        <div id="offline-queue-info" class="offline-info" style="display: none;">
+          <span class="offline-icon">📤</span>
+          <span id="queue-count">0</span> pending sync
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="settings-section">
+        <h3>Settings</h3>
+
+        <div class="setting-item">
+          <label class="switch">
+            <input type="checkbox" id="include-context" checked>
+            <span class="slider"></span>
+          </label>
+          <div class="setting-label">
+            <div class="setting-title">Include context</div>
+            <div class="setting-description">Save full sentence with word</div>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label class="switch">
+            <input type="checkbox" id="auto-detect" checked>
+            <span class="slider"></span>
+          </label>
+          <div class="setting-label">
+            <div class="setting-title">Auto-detect language</div>
+            <div class="setting-description">Automatically detect content language</div>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <label class="switch">
+            <input type="checkbox" id="notifications-enabled" checked>
+            <span class="slider"></span>
+          </label>
+          <div class="setting-label">
+            <div class="setting-title">Notifications</div>
+            <div class="setting-description">Show save confirmations</div>
+          </div>
+        </div>
+
+        <div class="setting-item color-picker">
+          <label for="highlight-color">Highlight color</label>
+          <div class="color-options">
+            <input type="radio" name="color" value="#FFEB3B" id="color-yellow" checked>
+            <label for="color-yellow" class="color-option" style="background: #FFEB3B;"></label>
+
+            <input type="radio" name="color" value="#B2FF59" id="color-green">
+            <label for="color-green" class="color-option" style="background: #B2FF59;"></label>
+
+            <input type="radio" name="color" value="#69F0AE" id="color-teal">
+            <label for="color-teal" class="color-option" style="background: #69F0AE;"></label>
+
+            <input type="radio" name="color" value="#82B1FF" id="color-blue">
+            <label for="color-blue" class="color-option" style="background: #82B1FF;"></label>
+
+            <input type="radio" name="color" value="#EA80FC" id="color-purple">
+            <label for="color-purple" class="color-option" style="background: #EA80FC;"></label>
+
+            <input type="radio" name="color" value="#FF8A80" id="color-red">
+            <label for="color-red" class="color-option" style="background: #FF8A80;"></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions-section">
+        <button id="open-dashboard" class="btn btn-secondary">
+          <span>Open Dashboard</span>
+          <span class="external-icon">↗</span>
+        </button>
+
+        <button id="sync-now-btn" class="btn btn-outline" style="display: none;">
+          <span>Sync Now</span>
+          <span class="sync-icon">⟳</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Loading Section -->
+    <div id="loading-section" class="section loading-section">
+      <div class="spinner-large"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

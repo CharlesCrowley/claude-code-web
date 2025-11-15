@@ -1,0 +1,215 @@
+/**
+ * Content Script Styles
+ * Styling for flashcard saver UI elements injected into web pages
+ */
+
+/* Context Menu */
+.flashcard-menu {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  animation: flashcard-menu-appear 0.2s ease-out;
+}
+
+@keyframes flashcard-menu-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.flashcard-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.flashcard-menu-btn:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.flashcard-menu-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.flashcard-menu-btn .icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.flashcard-menu-btn .text {
+  line-height: 1;
+}
+
+/* Notification Toast */
+.flashcard-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  animation: flashcard-notification-slide-in 0.3s ease-out;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+@keyframes flashcard-notification-slide-in {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.flashcard-notification.fade-out {
+  animation: flashcard-notification-fade-out 0.3s ease-out forwards;
+}
+
+@keyframes flashcard-notification-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.flashcard-notification.success {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+.flashcard-notification.error {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.flashcard-notification.info {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+/* Highlight Styling */
+.flashcard-highlight {
+  background-color: #FFEB3B;
+  border-radius: 2px;
+  padding: 2px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.flashcard-highlight:hover {
+  background-color: #FDD835;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .flashcard-menu {
+    background: #2d2d2d;
+    border-color: #444444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .flashcard-notification {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flashcard-menu {
+    padding: 2px;
+  }
+
+  .flashcard-menu-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .flashcard-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+}
+
+/* Prevent conflicts with page styles */
+.flashcard-menu,
+.flashcard-menu *,
+.flashcard-notification,
+.flashcard-notification *,
+.flashcard-highlight {
+  all: initial;
+  box-sizing: border-box;
+}
+
+/* Re-apply our styles after reset */
+.flashcard-menu {
+  display: block !important;
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+  padding: 4px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+}
+
+.flashcard-menu-btn {
+  display: flex !important;
+  align-items: center !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.flashcard-notification {
+  display: block !important;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  padding: 14px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  z-index: 999999 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
