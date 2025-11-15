@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Firstly Academy Flashcard Saver",
+  "version": "1.0.0",
+  "description": "Save highlighted text from any website to your Firstly Academy flashcard collection for language learning",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://firstly-academy.com/*",
+    "https://*.firstly-academy.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "Firstly Academy Flashcard Saver"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "flashcard-saver@firstly-academy.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png", "assets/styles/*.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
