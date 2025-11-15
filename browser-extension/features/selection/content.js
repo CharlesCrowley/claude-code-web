@@ -3,7 +3,7 @@
  * Runs on all web pages to capture text selection and save flashcards
  */
 
-import { SelectionHandler } from './lib/selection.js';
+import { SelectionHandler } from './selection.js';
 
 const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 

@@ -3,8 +3,8 @@
  * Manages offline flashcard saves and syncs when online
  */
 
-import { StorageManager } from './storage.js';
-import { APIClient } from './api-client.js';
+import { StorageManager } from '../storage/storage.js';
+import { APIClient } from '../api/api-client.js';
 
 const QUEUE_KEY = 'offline_queue';
 

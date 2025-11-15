@@ -3,9 +3,9 @@
  * Handles popup UI logic, authentication, and settings
  */
 
-import { AuthManager } from './lib/auth.js';
-import { Preferences } from './lib/preferences.js';
-import { StorageManager } from './lib/storage.js';
+import { AuthManager } from '../auth/auth.js';
+import { Preferences } from '../preferences/preferences.js';
+import { StorageManager } from '../storage/storage.js';
 
 const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 
