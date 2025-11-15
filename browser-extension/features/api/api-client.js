@@ -3,7 +3,7 @@
  * Handles all API communication with Firstly Academy backend
  */
 
-import { AuthManager } from './auth.js';
+import { AuthManager } from '../auth/auth.js';
 
 const API_BASE_URL = 'https://firstly-academy.com/api';
 

@@ -3,7 +3,7 @@
  * Handles user authentication and token management
  */
 
-import { StorageManager } from './storage.js';
+import { StorageManager } from '../storage/storage.js';
 
 const API_BASE_URL = 'https://firstly-academy.com/api';
 

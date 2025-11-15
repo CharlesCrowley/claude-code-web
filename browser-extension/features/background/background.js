@@ -3,10 +3,10 @@
  * Handles API communication, authentication, and extension lifecycle
  */
 
-import { APIClient } from './lib/api-client.js';
-import { AuthManager } from './lib/auth.js';
-import { OfflineQueue } from './lib/offline-queue.js';
-import { StorageManager } from './lib/storage.js';
+import { APIClient } from '../api/api-client.js';
+import { AuthManager } from '../auth/auth.js';
+import { OfflineQueue } from '../offline-sync/offline-queue.js';
+import { StorageManager } from '../storage/storage.js';
 
 const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 
